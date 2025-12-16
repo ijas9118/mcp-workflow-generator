@@ -4,6 +4,8 @@ import { parseDescription, convertFormat } from "../utils/workflowUtils.js";
 import { config } from "../config.js";
 import fs from "fs/promises";
 
+import { generateWorkflowFromLLM } from "../services/geminiService.js";
+
 export function registerGenerateTool(server: McpServer) {
   server.registerTool(
     "generate_workflow_spec",
@@ -35,7 +37,18 @@ export function registerGenerateTool(server: McpServer) {
           console.error("Failed to load domain config", e);
       }
 
-      const workflow = parseDescription(description, domainConfig);
+      let workflow;
+      try {
+        if (config.geminiApiKey) {
+           workflow = await generateWorkflowFromLLM(description);
+        } else {
+           console.warn("Gemini API Key not found, falling back to heuristic parser");
+           workflow = parseDescription(description, domainConfig);
+        }
+      } catch (error) {
+         console.error("LLM Generation failed, falling back to heuristic parser", error);
+         workflow = parseDescription(description, domainConfig);
+      }
 
       let content = "";
       if (format === "json") {
