@@ -34,6 +34,11 @@ async function main() {
       await server.connect(transport);
     });
 
+    app.get("/", (_req, res) => {
+      res.status(200).send("OK");
+    });
+
+
     app.post("/messages", async (req, res) => {
       if (transport) {
         await transport.handlePostMessage(req, res);
