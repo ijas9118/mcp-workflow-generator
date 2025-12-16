@@ -47,8 +47,8 @@ async function main() {
       }
     });
 
-    app.listen(port, () => {
-      console.error(`Workflow Blueprint Generator MCP Server running on SSE at http://localhost:${port}/sse`);
+    app.listen(port, "0.0.0.0", () => {
+      console.error(`Workflow Blueprint Generator MCP Server running on SSE at http://0.0.0.0:${port}/sse`);
     });
 
   } else {
