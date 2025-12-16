@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # MCP Workflow Generator
 
 An MCP (Model Context Protocol) server and client for generating, validating, and exporting workflow blueprints using Gemini LLM.
@@ -309,7 +311,7 @@ You: exit
 
 ## 📝 License
 
-ISC
+MIT License - see [LICENSE](./LICENSE) file for details
 
 ## 🤝 Contributing
 
