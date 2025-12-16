@@ -36,7 +36,7 @@ cd server/
 # Available configs in server/config/:
 # - default.json (generic workflows)
 # - healthcare.json (medical workflows)
-# - ecommerce.json (shopping workflows)
+# - banking.json (banking workflows)
 ```
 
 **Option B: Create custom config**
@@ -123,15 +123,9 @@ Create a workflow for emergency room triage
 Build a prescription refill process
 ```
 
-### E-commerce Domain (if using ecommerce.json)
+### Banking Domain (if using banking.json)
 ```
-Generate a checkout workflow
-```
-```
-Create an order fulfillment process
-```
-```
-Build a return and refund workflow
+Generate a Loan Application & Approval Workflow
 ```
 
 ### Generic Workflows (default.json)
