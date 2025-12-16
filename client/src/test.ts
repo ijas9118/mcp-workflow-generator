@@ -10,7 +10,7 @@ dotenv.config();
 
 async function testMCPServer() {
   const transport = new SSEClientTransport(
-    new URL("http://localhost:3000/sse")
+    new URL(process.env.MCP_SERVER_URL!)
   );
 
   const client = new Client(

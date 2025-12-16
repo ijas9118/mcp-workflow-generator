@@ -21,7 +21,7 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 async function main() {
   const transport = new SSEClientTransport(
-    new URL("http://localhost:3000/sse")
+    new URL(process.env.MCP_SERVER_URL!)
   );
 
   const client = new Client(

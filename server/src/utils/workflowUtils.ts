@@ -1,5 +1,4 @@
 import Ajv from "ajv";
-import { config } from "../config.js";
 import yaml from "js-yaml";
 import { WORKFLOW_SCHEMA, BPMN_SCHEMA } from "../schemas.js";
 
