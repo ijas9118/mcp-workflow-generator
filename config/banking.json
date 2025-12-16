@@ -1,0 +1,20 @@
+{
+  "stepTypes": [
+    { "type": "start", "description": "Application Received" },
+    { "type": "end", "description": "Application Processed" },
+    { "type": "kyc-check", "description": "Know Your Customer verification" },
+    { "type": "credit-score", "description": "Fetch credit score from bureau" },
+    { "type": "risk-assessment", "description": "Assess loan risk" },
+    { "type": "gateway", "description": "Approval Decision" }
+  ],
+  "actors": [
+    { "id": "system", "name": "Core Banking System" },
+    { "id": "applicant", "name": "Loan Applicant" },
+    { "id": "loan-officer", "name": "Loan Officer" },
+    { "id": "risk-manager", "name": "Risk Manager" }
+  ],
+  "templates": [
+     { "id": "loan-origination", "name": "Loan Origination", "description": "Appply -> KYC -> Credit Check -> Approval -> Disburse" },
+     { "id": "fraud-check", "name": "Fraud Detection", "description": "Transaction -> Analyze -> Flag/Clear" }
+  ]
+}

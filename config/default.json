@@ -1,0 +1,20 @@
+{
+  "stepTypes": [
+    { "type": "start", "description": "Start of the process" },
+    { "type": "end", "description": "End of the process" },
+    { "type": "task", "description": "Generic task" },
+    { "type": "user-task", "description": "Task requiring user interaction" },
+    { "type": "service-task", "description": "Automated service task" },
+    { "type": "gateway", "description": "Decision point" }
+  ],
+  "actors": [
+    { "id": "system", "name": "System" },
+    { "id": "user", "name": "User" },
+    { "id": "admin", "name": "Administrator" },
+    { "id": "manager", "name": "Manager" }
+  ],
+  "templates": [
+     { "id": "approval-flow", "name": "Basic Approval Flow", "description": "Request -> Approve/Reject -> Notify" },
+     { "id": "data-processing", "name": "Data Processing Pipeline", "description": "Fetch -> Process -> Save" }
+  ]
+}

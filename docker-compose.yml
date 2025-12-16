@@ -1,0 +1,13 @@
+services:
+  mcp-workflow:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - TRANSPORT=sse
+      - PORT=3000
+      - DOMAIN_CONFIG_PATH=/app/config/default.json
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+    restart: unless-stopped

@@ -1,0 +1,21 @@
+{
+  "stepTypes": [
+    { "type": "start", "description": "Patient Arrival" },
+    { "type": "end", "description": "Discharge" },
+    { "type": "triage", "description": "Initial assessment" },
+    { "type": "insurance-verify", "description": "Verify insurance coverage" },
+    { "type": "consultation", "description": "Doctor consultation" },
+    { "type": "gateway", "description": "Treatment Plan" }
+  ],
+  "actors": [
+    { "id": "system", "name": "EHR System" },
+    { "id": "patient", "name": "Patient" },
+    { "id": "nurse", "name": "Triage Nurse" },
+    { "id": "doctor", "name": "Physician" },
+    { "id": "insurer", "name": "Insurance Provider" }
+  ],
+  "templates": [
+     { "id": "patient-intake", "name": "Patient Intake Flow", "description": "Arrival -> Triage -> Registration -> Wait" },
+     { "id": "insurance-claim", "name": "Claim Processing", "description": "Service -> Coding -> Submission -> Payment" }
+  ]
+}
